@@ -2,321 +2,159 @@
 <html class="no-js" lang="ro">
 
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Aurelia Stoie Mărginean</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
-	<!-- Place favicon.ico in the root directory -->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Aurelia Stoie Mărginean</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+  <!-- Place favicon.ico in the root directory -->
 
-	<!-- ========================= CSS here ========================= -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-	<link rel="stylesheet" href="assets/css/site.css" />
+  <!-- ========================= CSS here ========================= -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
 <body>
-<header class="navbar navbar-expand-lg navbar-light asm-navbar">
-<nav class="container-fluid">
-    <span class="p-0 me-0 me-lg-2 fs-4">Aurelia Stoie Mărginean</span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Acasă</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#expozitii">Expoziții</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" aria-current="page" href="#albume">Cărți</a>
-        </li>
-        <li class="nav-item">
-           <a class="nav-link" aria-current="page" href="#activitate">Galerie</a>
-        </li>
-      </ul>
+  <header class="navbar navbar-expand-lg navbar-light asm-navbar">
+    <nav class="container-fluid">
+      <span class="p-0 me-0 me-lg-2 fs-4">Aurelia Stoie Mărginean</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="menu_home" href="#">Acasă</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="menu_exhibitions" href="#expozitii">Expoziții</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="menu_books" href="#albume">Cărți</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="menu_gallery" href="#activitate">Galerie</a>
+          </li>
+
+          <!-- Dropdown pentru limbă cu SVG inline -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" id="currentLanguage">
+              <!-- Drapel afișat în meniu (implicit RO) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" id="flagCurrent">
+                <rect width="8" height="16" fill="#002B7F" />
+                <rect x="8" width="8" height="16" fill="#FCD116" />
+                <rect x="16" width="8" height="16" fill="#CE1126" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item d-flex align-items-center language-option" href="#" data-lang="ro">
+                  <!-- Drapel RO -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" class="me-2">
+                    <rect width="8" height="16" fill="#002B7F" />
+                    <rect x="8" width="8" height="16" fill="#FCD116" />
+                    <rect x="16" width="8" height="16" fill="#CE1126" />
+                  </svg>
+                  Română
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center language-option" href="#" data-lang="fr">
+                  <!-- Drapel FR -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" class="me-2">
+                    <rect width="8" height="16" fill="#0055A4" />
+                    <rect x="8" width="8" height="16" fill="#FFFFFF" />
+                    <rect x="16" width="8" height="16" fill="#EF4135" />
+                  </svg>
+                  Français
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center language-option" href="#" data-lang="en">
+                  <!-- Drapel EN (Marea Britanie) -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" class="me-2">
+                    <rect width="24" height="16" fill="#012169" />
+                    <path d="M0 0 L24 16 M24 0 L0 16" stroke="#fff" stroke-width="2" />
+                    <path d="M0 0 L24 16 M24 0 L0 16" stroke="#C8102E" stroke-width="1" />
+                    <rect x="10" width="4" height="16" fill="#fff" />
+                    <rect y="6" width="24" height="4" fill="#fff" />
+                    <rect x="11" width="2" height="16" fill="#C8102E" />
+                    <rect y="7" width="24" height="2" fill="#C8102E" />
+                  </svg>
+                  English
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+  <section id="home" class="m-4">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-6 col-md-10">
+          <div class="asm-content" , id="citate">
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6">
+          <div class="asm-image text-center text-lg-start">
+            <img class="img-fluid" src="assets/images/pagini/autoportret.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-</nav>
+  </section>
+  <section id="expozitii" class="m-4">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-6 col-md-10 order-1">
+          <div class="asm-content">
+            <h1 id="lista-expozitii-titlu"></h1>
+            <ul class="list-unstyled" id="lista-expozitii"></ul>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6 order-0">
+          <div class="asm-image text-center text-lg-start">
+            <img class="img-fluid" src="assets/images/pagini/Ieruslim.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</header>
-	<section id="home" class="m-4">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-10">
-					<div class="asm-content">
-						<h1>Aurelia Stoie Mărginean</h1>
-						<p>"Aurelia Stoie Mărginean este un asemenea artist care răscolește toate bucătăriile lumii, se umple de gusturi stranii și arome ca să le redea oamenilor transfigurate de plăcerea resimțită de ea. Iată imaginea pe care mi-o stârnește cunoscuta și recunoscuta artistă plastică Aurelia Stoie Mărginean, după mulți ani în care am avut răgaz s-o cunosc ca pictoriță și ca prietenă. Până și numele ei pare predestinat. Aurelia e o artistă solară care trăiește și recreează frumosul sub toate formele lui..." - Nora Iuga. Tăcutele culori vor să se audă - Cetatea lui Bucur</p>
-						<p>"Artista încearcă să cuprindă concepția contemporană asupra organizării spațiului urban de existență (Deschidere spre cer, Cartierele imense). Faptul mi se pare cu deosebire important pentru că, în acest caz, avem de-a face, în primul rând, cu o atitudine reflexivă, cu asumarea răspunderii artistului de a trece dincolo de aparențe, de a sesiza datele esențiale ale existenței umane, în condițiile societății contemporane." - Mihai Nadin. Pictori din Brașov</p>
-					</div>
-				</div>
-				<div class="col-xxl-6 col-xl-6 col-lg-6">
-					<div class="asm-image text-center text-lg-start">
-						<img class="img-fluid" src="assets/images/pagini/autoportret.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="expozitii" class="m-4">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-10 order-1">
-					<div class="asm-content">
-						<h1>Expoziții</h1>
-    <ul class="list-unstyled">
-        <li>
-            <strong>1969</strong> – Expoziție personală, sala Ateneul tineretului, București.
-        </li>
-        <li>
-            <strong>1974</strong> - Expoziție personală, Galeriile Victoria, Brașov
-        </li>
-        <li>
-            <strong>1974</strong> - Expoziție personală, Galeria Amfora, București
-        </li>
-        <li>
-            <strong>1978</strong> - Expoziție personală, Galeriile Victoria, Brașov și Sala Eforie, București.
-        </li>
-        <li>
-            <strong>1982</strong> - Expoziție personală "Impresii de la Budapesta", Galeriile Brassoi Lapok, Brașov
-        </li>
-        <li>
-            <strong>1984</strong> - Expoziție personală, Sala Arta, Brașov.
-        </li>
-        <li>
-            <strong>1990</strong> - Expoziție personală, Galeriile Victoria, Brașov.
-        </li>
-        <li>
-            <strong>1992</strong> - Expoziție personală "Brașovul în acuarelă și guașă", Muzeul de Artă Brașov
-        </li>
-        <li>
-            <strong>1996</strong> - Expoziție personală, Casa Americii Latine, București
-        </li>
-        <li>
-            <strong>1998</strong> - Expoziție personală "Nouă zile la Ierusalim", Muzeul de Artă, Brașov
-        </li>
-        <li>
-            <strong>2000</strong> - Expoziție retrospectivă de pictură, Muzeul de Artă, Brașov;
-        </li>
-        <li>
-            <strong>2000</strong> - Expoziție personală "De la Brașov la Rishon Lezion", Rishon LeZion, Israel
-        </li>
-        <li>
-            <strong>2000</strong> - Expoziție personală "Ierusalim, în viziunea unui artist român", Palatul Suțu, Muzeul Municipiului București
-        </li>
-        <li>
-            <strong>2002</strong> - Expoziție personală, Institutul Cultural Român și de Cercetare Umanistică, Veneția, Italia
-        </li>
-        <li>
-            <strong>2003</strong> - Expoziție personală de acuarelă, Institutul Cultural Român Berlin, Germania; Expoziție personală, institutul Francez București
-        </li>
-        <li>
-            <strong>2003</strong> - Expoziție personală "Note de călătorie – Veneția", Institutul Italian de Cultură, București
-        </li>
-        <li>
-            <strong>2003</strong> - Expoziție personală "Note de călătorie – Paris, Ierusalim, Veneția", Muzeul de artă, Brașov
-        </li>
-        <li>
-            <strong>2004</strong> - Expoziție personală, Galeriile Victoria, Brașov;
-        </li>
-        <li>
-            <strong>2004</strong> - Expoziție personală, Institutul Cultural Român, Madrid, Spania
-        </li>
-        <li>
-            <strong>2004</strong> - Expoziție personală de acuarelă "Salvați Vama Veche", Muzeul de Artă Brașov.
-        </li>
-        <li>
-            <strong>2004 - 2005</strong> - Expoziție personală "Trei capitale europene în lumina acuarelei – Berlin, Madrid, Viena", Muzeul de Artă; Brașov.
-        </li>
-        <li>
-            <strong>2005</strong> - Expoziție personală de acuarelă, Institutul Cultural Roman, Viena, Austria
-        </li>
-        <li>
-            <strong>2006</strong> - Expoziție personală "Cipru, Creta, Santorini", Muzeul de Artă Brașov
-        </li>
-        <li>
-            <strong>2007</strong> - Expoziție personală "Eternul Ierusalim", Muzeul de Artă Brașov
-        </li>
-        <li>
-            <strong>2007</strong> – Expoziție de grafică și sculptură împreună cu sculptorul Charalampou Christodolou, Nicosia, Cipru
-        </li>
-        <li>
-            <strong>2008</strong> - Expoziție personală "Jurnal pictat în China", Muzeul de Artă, Brașov
-        </li>
-        <li>
-            <strong>2008</strong> - Expoziție personală de grafică "Halou eminescian", Universitatea Transilvania, Brașov
-        </li>
-        <li>
-            <strong>2010</strong> - Expoziție ex-libris "Aventurile lui Don Quijote", Biblioteca Județeană George Barițiu, Brașov
-        </li>
-        <li>
-            <strong>2011</strong> - Expoziție personală "Călătoria. Clipe americane", Muzeul Național al Satului „Dimitrie Gusti”, București
-        </li>
-        <li>
-            <strong>2011</strong> - Expoziție personală "Ierusalim, Lumină și culoare", Muzeul Unirii, Iași
-        </li>
-        <li>
-            <strong>2012</strong> - Expoziție personală de acuarelă, pictură, grafică "Ierusalim", Palatul Parlamentului, București
-        </li>
-        <li>
-            <strong>2012</strong> - Expoziție personală "Capul Nord – schițe de călătorie", Galeriile Europe, Brașov
-        </li>
-        <li>
-            <strong>2013</strong> - Expoziție personală "Spania, impresii de călătorie", Galeriile Europe, Brașov
-        </li>
-        <li>
-            <strong>2014</strong> - Expoziție personală "In grădina lui Moshe", Galeriile Europe, Brașov
-        </li>
-        <li>
-            <strong>2015</strong> - Expoziție personală de pictură și grafică "Retro 75", Galeriile Europe, Brașov
-        </li>
-        <li>
-            <strong>2017</strong> - Expoziție personală "Schițe de călătorie: Coasta de Azur, Sicilia, Ierusalim, Corfu, Portugalia, Dubai", Galeriile Europe, Brașov
-        </li>
-        <li>
-            <strong>2018</strong> - Expoziție personală de desene în peniță și tuș, Galeriile Europe, Brașov
-        </li>
-        <li>
-            <strong>2019</strong> - Expoziție personală "Mică retrospectivă – Plaja de la 2Mai spre Vama Veche", Galeriile Europe, Brașov.
-        </li>
-        <li>
-            <strong>2019</strong> - Expoziție personală "Clipe americane", Muzeul Național al Satului „Dimitrie Gusti”, București
-        </li>
-        <li>
-            <strong>2023</strong> - Expoziție personală "Marea la 2Mai și Vama Veche", Căminul Cultural 2Mai
-        </li>
-        <li>
-            <strong>2024</strong> - Expoziție personală "Clipe americane", la Galeriile Europe, Brașov.
-        </li>
-        <li>
-            <strong>2025</strong> - Expoziție personală "Cascade și ghetari in tarile nordice", Galeriile Europe, Brașov.
-        </li>
-    </ul>
+  <section id="albume" class="ms-4">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-6 col-md-10">
+          <div class="asm-content">
+            <h1 id="lista-carti-titlu"></h1>
+            <ul class="list-unstyled" id="lista-carti"></ul>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6">
+          <div class="asm-image text-center text-lg-start mt-4">
+            <img class="img-fluid" src="assets/images/carti/La malul apei.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					</div>
-				</div>
-				<div class="col-xxl-6 col-xl-6 col-lg-6 order-0">
-					<div class="asm-image text-center text-lg-start">
-						<img class="img-fluid" src="assets/images/pagini/Ieruslim.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section id="albume" class="ms-4">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-10">
-					<div class="asm-content">
-						<h1>Cărți, Album de artă</h1>
-    
-        <ul class="list-unstyled">
-        <li>
-            <strong>Brașovul</strong> (album de artă), Editura Duminică, 1993, Brașov
-        </li>
-        <li>
-            <strong>Semn de aer</strong> (poezie), Editura Transilvania Expres, 2015
-        </li>
-        <li>
-            <strong>Șcheii Brașovului</strong> (desene în peniță, album documentar), Editura Transilvania Expres, 2015
-        </li>
-        <li>
-            <strong>Zicale - Ziceri - Zicători</strong>, Editura Transilvania Expres, 2016
-        </li>
-        <li>
-            <strong>Trăsături și expresii</strong> (galerie de portrete - pictură, pastel, creioane colorate, tuș), Editura Transilvania Expres, 2016
-        </li>
-        <li>
-            <strong>Ierusalim - lumină și culoare</strong> (album de artă), Editura Transilvania Expres, 2016
-        </li>
-        <li>
-            <strong>Clipe americane</strong> (album de artă), Editura Transilvania Expres, 2017
-        </li>
-        <li>
-            <strong>Cipru - Insula Afroditei</strong> (album de artă), Editura Libris Editorial, 2017
-        </li>
-        <li>
-            <strong>Itinerarii din China</strong> (album de artă), Editura Libris Editorial, 2017
-        </li>
-        <li>
-            <strong>Peisaje din Brașov</strong> (album de artă), Editura Libris Editorial, 2018
-        </li>
-        <li>
-            <strong>Venetia, Creta, Santorini</strong> (album de artă), Editura Libris Editorial, 2018
-        </li>
-        <li>
-            <strong>Marea la 2 Mai și Vama Veche</strong> (album de artă), Editura Libris Editorial, 2019
-            <small class="text-muted ms-2">(Ref: Curierul Național, Anca Filoteanu, 17 iulie 2019)</small>
-        </li>
-        <li>
-            <strong>Spre Nord</strong> (album de artă) Editura Libris Editorial, 2020
-        </li>
-        <li>
-            <strong>Paris</strong> (album de artă), Editura Creator, 2020
-        </li>
 
-        <li>
-            <strong>Culorile Spaniei</strong> (album de artă), Editura Creator, 2020
-        </li>
-        <li>
-            <strong>Ierusalim. Tel Aviv. Betleem.</strong> Schite in acuarelă (album de artă), Editura Libris Editorial, 2021
-        </li>
-        <li>
-            <strong>Scotia. Portugalia. Sicilia.</strong> Schite in acuarelă (album de artum), Editura Libris Editorial, 2021
-        </li>
-        <li>
-            <strong>Elada. Budapesta. Istanbul.</strong> Desen si acuarelă (album de artă), Editura Libris Editorial, 2021
-        </li>
-        <li>
-            <strong>Coasta de Azur. Corfu. Dubai</strong> (album de artă), Editura Creator, 2021
-        </li>
-        <li>
-            <strong>Viena</strong> (album de artă), Editura Creator, 2022
-        </li>
-        <li>
-            <strong>Berlin</strong> (album de artă), Editura Creator, 2022
-        </li>
-        <li>
-            <strong>Copacul creație divină</strong> (album de artă), Editura Creator, Brașov, 2022
-        </li>
-        <li>
-            <strong>La malul apei</strong> (album de artă), volumul 1 și 2, Editura Creator, Brașov, 2023
-        </li>
-        <li>
-            <strong>Flori în anotimpuri. Trandafiri</strong> (album de artă), Editura Creator, Brașov, 2024
-        </li>
-        <li>
-            <strong>Ilustrația, arta interpretării</strong> (album de artă), Editura Creator, Brașov, 2024
-        </li>
-        <li>
-            <strong>Flori în anotimpuri. Primăvara</strong> (album de artă), Editura Creator, Brașov, 2025.
-        </li>
-        <li>
-            <strong>Flori în anotimpuri. Formă și culoare</strong> (album de artă), Editura Creator, Brașov, 2025
-        </li>
-    </ul>
-
-					
-					</div>
-				</div>
-				<div class="col-xxl-6 col-xl-6 col-lg-6">
-					<div class="asm-image text-center text-lg-start mt-4">
-						<img class="img-fluid" src="assets/images/carti/La malul apei.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	
-	<a href="#" class="fs-2 scroll-top btn-hover text-center">
-		<span class="bi bi-arrow-up-circle"></span>
-	</a>
-	<!-- ========================= JS here ========================= -->
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
+  <a href="#" class="fs-2 scroll-top btn-hover text-center">
+    <span class="bi bi-arrow-up-circle"></span>
+  </a>
+  <!-- ========================= JS here ========================= -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
