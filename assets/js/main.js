@@ -762,19 +762,249 @@ const gallery = {
       "fr": "Aurelia Stoie Mărginean est présentée par Veronica Bodea Tatulea, critique d'art et poétesse Nadia Cella Pop"
     },
     "images": [
-      "assets/images/galerie/1/image01.jpeg",
-      "assets/images/galerie/1/image02.jpeg",
-      "assets/images/galerie/1/image03.jpeg",
-      "assets/images/galerie/1/image04.jpeg",
-      "assets/images/galerie/1/image05.jpeg",
-      "assets/images/galerie/1/image06.jpeg",
-      "assets/images/galerie/1/image07.jpeg"
+      { "src": "assets/images/galerie/1/image01.jpeg" },
+      { "src": "assets/images/galerie/1/image02.jpeg" },
+      { "src": "assets/images/galerie/1/image03.jpeg" },
+      { "src": "assets/images/galerie/1/image04.jpeg" },
+      { "src": "assets/images/galerie/1/image05.jpeg" },
+      { "src": "assets/images/galerie/1/image06.jpeg" },
+      { "src": "assets/images/galerie/1/image07.jpeg" }
     ],
     "videos": [
-      "assets/images/galerie/1/video01.mp4",
-      "assets/images/galerie/1/video02.mp4",
-      "assets/images/galerie/1/video03.mp4",
+      { "src": "assets/images/galerie/1/video01.mp4" },
+      { "src": "assets/images/galerie/1/video02.mp4" },
+      { "src": "assets/images/galerie/1/video03.mp4" },
     ]
+  },
+  "data02": {
+    "titles": {
+      "ro": "Galerie de portrete",
+      "en": "Portrait gallery",
+      "fr": "Galerie de portraits"
+    },
+    "descriptions": {
+      "ro": "Portrete",
+      "en": "Portraits",
+      "fr": "Portraits"
+    },
+    "images": [
+      { "src": "assets/images/galerie/2/Papa Ioan Paul al II-lea.jpg", "titles": { "ro": "Papa Ioan Paul al II-lea", "en": "Pope John Paul II", "fr": "Pape Jean-Paul II" } },
+      { "src": "assets/images/galerie/2/Albert Zoli.jpg", "titles": { "ro": "Albert Zoli", "en": "Albert Zoli", "fr": "Albert Zoli" } },
+      { "src": "assets/images/galerie/2/Alexandru Suciu.jpg", "titles": { "ro": "Alexandru Suciu", "en": "Alexandru Suciu", "fr": "Alexandru Suciu" } },
+      { "src": "assets/images/galerie/2/Aurelia Ungur.jpg", "titles": { "ro": "Aurelia Ungur", "en": "Aurelia Ungur", "fr": "Aurelia Ungur" } },
+      { "src": "assets/images/galerie/2/Carmen Daicu.jpg", "titles": { "ro": "Carmen Daicu", "en": "Carmen Daicu", "fr": "Carmen Daicu" } },
+      { "src": "assets/images/galerie/2/Catalin Barbu.jpg", "titles": { "ro": "Catalin Barbu", "en": "Catalin Barbu", "fr": "Catalin Barbu" } },
+      { "src": "assets/images/galerie/2/Cornel Dumitrescu.jpg", "titles": { "ro": "Cornel Dumitrescu", "en": "Cornel Dumitrescu", "fr": "Cornel Dumitrescu" } },
+      { "src": "assets/images/galerie/2/Dali.png", "titles": { "ro": "Dali", "en": "Dali", "fr": "Dali" } },
+      { "src": "assets/images/galerie/2/Gabriel Stan.jpg", "titles": { "ro": "Gabriel Stan", "en": "Gabriel Stan", "fr": "Gabriel Stan" } },
+      { "src": "assets/images/galerie/2/Gonbos.jpg", "titles": { "ro": "Gonbos", "en": "Gonbos", "fr": "Gonbos" } },
+      { "src": "assets/images/galerie/2/Harald Meschendorfer.jpg", "titles": { "ro": "Harald Meschendorfer", "en": "Harald Meschendorfer", "fr": "Harald Meschendorfer" } },
+      { "src": "assets/images/galerie/2/Nicolae Stoie.jpg", "titles": { "ro": "Nicolae Stoie", "en": "Nicolae Stoie", "fr": "Nicolae Stoie" } },
+      { "src": "assets/images/galerie/2/Nina Casian.png", "titles": { "ro": "Nina Casian", "en": "Nina Casian poet", "fr": "Nina Casian" } },
+      { "src": "assets/images/galerie/2/Nora Iuga.png", "titles": { "ro": "Nora Iuga", "en": "Nora Iuga", "fr": "Nora Iuga" } },
+      { "src": "assets/images/galerie/2/Sanda Ghetie.jpg", "titles": { "ro": "Sanda Ghetie", "en": "Sanda Ghetie", "fr": "Sanda Ghetie" } },
+      { "src": "assets/images/galerie/2/Sinnziana Batiste.jpg", "titles": { "ro": "Sinnziana Batiste", "en": "Sinnziana Batiste", "fr": "Sinnziana Batiste" } }
+    ],
+    "videos": []
+  },
+  "data03": {
+    "titles": {
+      "ro": "Schite de Calatorie America",
+      "en": "Travel Sketches America",
+      "fr": "Esquisses de voyage Amerique"
+    },
+    "descriptions": {
+      "ro": "Schite de Calatorie America.",
+      "en": "Travel Sketches America",
+      "fr": "Esquisses de voyage Amerique"
+    },
+    "images": [
+      { "src": "assets/images/galerie/3/05 Forme de relief la Bryce Comyon.png", "titles": { "ro": "Forme de relief la Bryce Comyon", "en": "Landforms at Bryce Comyon", "fr": "Formes de relief a Bryce Comyon" } },
+      { "src": "assets/images/galerie/3/104 Capitoliu Washington.png", "titles": { "ro": "Capitoliu Washington", "en": "Washington Capitol", "fr": "Capitole de Washington" } },
+      { "src": "assets/images/galerie/3/106 Marele Canion.png", "titles": { "ro": "Marele Canion", "en": "Grand Canyon", "fr": "Grand Canyon" } },
+      { "src": "assets/images/galerie/3/110 Sala de concert ]n centrul Los Angeles.png", "titles": { "ro": "Sala de concert in centrul Los Angeles", "en": "Concert hall in downtown Los Angeles", "fr": "Salle de concert au centre de Los Angeles" } },
+      { "src": "assets/images/galerie/3/111 O cladire extraordinara, sala de concere .png", "titles": { "ro": "O cladire extraordinara, sala de concerte", "en": "An extraordinary building, concert hall", "fr": "Un batiment extraordinaire, salle de concert" } },
+      { "src": "assets/images/galerie/3/113 Localitate cu aspect olandez.png", "titles": { "ro": "Localitate cu aspect olandez", "en": "Town with a Dutch look", "fr": "Localite a aspect neerlandais" } },
+      { "src": "assets/images/galerie/3/114Obelisca.png", "titles": { "ro": "Obelisca", "en": "Obelisk", "fr": "Obelisque" } },
+      { "src": "assets/images/galerie/3/116 Hollyoad Mascatii si selele moarte.png", "titles": { "ro": "Hollywood, mascatii si stelele moarte", "en": "Hollywood, the masked and the dead stars", "fr": "Hollywood, les masques et les etoiles mortes" } },
+      { "src": "assets/images/galerie/3/118 Broadway.png", "titles": { "ro": "Broadway", "en": "Broadway", "fr": "Broadway" } },
+      { "src": "assets/images/galerie/3/119 Muzeul Metropolitan.png", "titles": { "ro": "Muzeul Metropolitan", "en": "Metropolitan Museum", "fr": "Musee Metropolitain" } },
+      { "src": "assets/images/galerie/3/120 Galeria Nationala de Arta Washengton.png", "titles": { "ro": "Galeria Nationala de Arta Washington", "en": "National Gallery of Art Washington", "fr": "Galerie nationale d'art de Washington" } },
+      { "src": "assets/images/galerie/3/121 hotelul Stanfors.png", "titles": { "ro": "Hotelul Stanfors", "en": "Stanfors Hotel", "fr": "Hotel Stanfors" } },
+      { "src": "assets/images/galerie/3/13 Times Square New York.png", "titles": { "ro": "Times Square, New York", "en": "Times Square, New York", "fr": "Times Square, New York" } },
+      { "src": "assets/images/galerie/3/128 Din geamul Feribotului Statuia Libertati.png", "titles": { "ro": "Din geamul feribotului, Statuia Libertatii", "en": "From the ferry window, the Statue of Liberty", "fr": "Depuis la fenetre du ferry, la Statue de la Liberte" } },
+      { "src": "assets/images/galerie/3/129 Cantareti la malul Oceanului Pacific.png", "titles": { "ro": "Cantareti la malul Oceanului Pacific", "en": "Singers on the shore of the Pacific Ocean", "fr": "Chanteurs au bord de l'ocean Pacifique" } },
+      { "src": "assets/images/galerie/3/130 Impresie la Bryce Canyon.png", "titles": { "ro": "Impresie la Bryce Canyon", "en": "Impression at Bryce Canyon", "fr": "Impression a Bryce Canyon" } },
+      { "src": "assets/images/galerie/3/131 Schita la Beverly Hills.png", "titles": { "ro": "Schita la Beverly Hills", "en": "Sketch in Beverly Hills", "fr": "Esquisse a Beverly Hills" } },
+      { "src": "assets/images/galerie/3/136 New York vazut de pe vapor.png", "titles": { "ro": "New York vazut de pe vapor", "en": "New York seen from the ferry", "fr": "New York vu depuis le ferry" } },
+      { "src": "assets/images/galerie/3/139 Marele Canion Impresie.png", "titles": { "ro": "Marele Canion, impresie", "en": "Grand Canyon, impression", "fr": "Grand Canyon, impression" } },
+      { "src": "assets/images/galerie/3/142 Crochiu in Times Square.png", "titles": { "ro": "Crochiu in Times Square", "en": "Sketch in Times Square", "fr": "Croquis a Times Square" } },
+      { "src": "assets/images/galerie/3/145 Cascada Niagara.png", "titles": { "ro": "Cascada Niagara", "en": "Niagara Falls", "fr": "Chutes du Niagara" } },
+      { "src": "assets/images/galerie/3/146 Vederea statuiei din spate.png", "titles": { "ro": "Vederea statuiei din spate", "en": "View of the statue from behind", "fr": "Vue de la statue de dos" } },
+      { "src": "assets/images/galerie/3/147 vedere de pe vapor.png", "titles": { "ro": "Vedere de pe vapor", "en": "View from the ferry", "fr": "Vue depuis le ferry" } },
+      { "src": "assets/images/galerie/3/15 Covorul rosu de la Hollywod.png", "titles": { "ro": "Covorul rosu de la Hollywood", "en": "The red carpet in Hollywood", "fr": "Le tapis rouge a Hollywood" } },
+      { "src": "assets/images/galerie/3/16 Pereche de motocicliști la Bryce Canyon (II) S.U.A.png", "titles": { "ro": "Pereche de motociclisti la Bryce Canyon (II), S.U.A.", "en": "Pair of motorcyclists at Bryce Canyon (II), U.S.A.", "fr": "Couple de motocyclistes a Bryce Canyon (II), Etats-Unis" } },
+      { "src": "assets/images/galerie/3/17 Pereche de motocicliști la Bryce Canyon (I) S.U.A.png", "titles": { "ro": "Pereche de motociclisti la Bryce Canyon (I), S.U.A.", "en": "Pair of motorcyclists at Bryce Canyon (I), U.S.A.", "fr": "Couple de motocyclistes a Bryce Canyon (I), Etats-Unis" } },
+      { "src": "assets/images/galerie/3/22 Segoia cel ami mare si mai vechi copac din lume.png", "titles": { "ro": "Sequoia, cel mai mare si mai vechi copac din lume", "en": "Sequoia, the biggest and oldest tree in the world", "fr": "Sequoia, l'arbre le plus grand et le plus ancien du monde" } },
+      { "src": "assets/images/galerie/3/25.Hollywood Teatru cu animale.png", "titles": { "ro": "Hollywood, teatru cu animale", "en": "Hollywood, theater with animals", "fr": "Hollywood, theatre avec animaux" } },
+      { "src": "assets/images/galerie/3/31 Primitor de turisti din autocare costumat gangster California.png", "titles": { "ro": "Primitor de turisti din autocare, costumat gangster, California", "en": "Tour bus greeter dressed as a gangster, California", "fr": "Accueil des touristes en autocar, deguise en gangster, Californie" } },
+      { "src": "assets/images/galerie/3/32 Hollywood Water World.png", "titles": { "ro": "Hollywood Water World", "en": "Hollywood Water World", "fr": "Hollywood Water World" } },
+      { "src": "assets/images/galerie/3/44 Parcul Yosemite.png", "titles": { "ro": "Parcul Yosemite", "en": "Yosemite Park", "fr": "Parc Yosemite" } },
+      { "src": "assets/images/galerie/3/51 Obeliscul Washington.png", "titles": { "ro": "Obeliscul Washington", "en": "Washington Obelisk", "fr": "Obelisque de Washington" } },
+      { "src": "assets/images/galerie/3/53 Impresionanta Statui a Libertati.png", "titles": { "ro": "Impresionanta Statuie a Libertatii", "en": "The impressive Statue of Liberty", "fr": "L'impressionnante Statue de la Liberte" } },
+      { "src": "assets/images/galerie/3/55 Crochiu cu obezi Washinthon D.C.png", "titles": { "ro": "Crochiu cu obezi, Washington D.C.", "en": "Sketch with obese figures, Washington D.C.", "fr": "Croquis avec des obeses, Washington D.C." } },
+      { "src": "assets/images/galerie/3/67 Negresa.png", "titles": { "ro": "Negresa", "en": "Black woman", "fr": "Femme noire" } },
+      { "src": "assets/images/galerie/3/85 New York orizont de pe vapor (4).png", "titles": { "ro": "New York, orizont de pe vapor (4)", "en": "New York skyline from the ferry (4)", "fr": "Horizon de New York depuis le ferry (4)" } },
+      { "src": "assets/images/galerie/3/86 Satuia Libertati.png", "titles": { "ro": "Statuia Libertatii", "en": "Statue of Liberty", "fr": "Statue de la Liberte" } },
+      { "src": "assets/images/galerie/3/87 New York orizont de pe vapor (5).png", "titles": { "ro": "New York, orizont de pe vapor (5)", "en": "New York skyline from the ferry (5)", "fr": "Horizon de New York depuis le ferry (5)" } },
+      { "src": "assets/images/galerie/3/96 Mirositorul de droguri (1).png", "titles": { "ro": "Mirositorul de droguri (1)", "en": "Drug sniffer (1)", "fr": "Renifleur de drogue (1)" } }
+    ],
+    "videos": []
+  },
+  "data04": {
+    "titles": {
+      "ro": "Schite de Calatorie Santorini",
+      "en": "Travel Sketches Santorini",
+      "fr": "Esquisses de voyage Santorini"
+    },
+    "descriptions": {
+      "ro": "Schite de Calatorie Santorini.",
+      "en": "Travel Sketches Santorini.",
+      "fr": "Esquisses de voyage Santorini."
+    },
+    "images": [
+      { "src": "assets/images/galerie/4/Fira, Santorini.png", "titles": { "ro": "Fira, Santorini", "en": "Fira, Santorini", "fr": "Fira, Santorini" } },
+      { "src": "assets/images/galerie/4/Pe vapor spre Santorini.png", "titles": { "ro": "Pe vapor spre Santorini", "en": "On the ferry to Santorini", "fr": "Sur le ferry vers Santorini" } }
+    ],
+    "videos": []
+  },
+  "data05": {
+    "titles": {
+      "ro": "Schite de Calatorie Ierusalim",
+      "en": "Travel Sketches Jerusalem",
+      "fr": "Esquisses de voyage Jerusalem"
+    },
+    "descriptions": {
+      "ro": "Schite de Calatorie Ierusalim.",
+      "en": "Travel Sketches Jerusalem.",
+      "fr": "Esquisses de voyage Jerusalem."
+    },
+    "images": [
+      { "src": "assets/images/galerie/5/Bilete la Zidul Plangeri 25,0 x35,0 cm.png", "titles": { "ro": "Bilete la Zidul Plangerii", "en": "Notes at the Wailing Wall", "fr": "Billets au Mur des Lamentations" } },
+      { "src": "assets/images/galerie/5/crochiu la zidul plangeri 2 25,0 x35,0 cm.png", "titles": { "ro": "Crochiu la Zidul Plangerii 2", "en": "Sketch at the Wailing Wall 2", "fr": "Croquis au Mur des Lamentations 2" } },
+      { "src": "assets/images/galerie/5/cupola alba 25,0 x 32,0 cm.png", "titles": { "ro": "Cupola alba", "en": "White dome", "fr": "Coupole blanche" } },
+      { "src": "assets/images/galerie/5/Ierusalim.png", "titles": { "ro": "Ierusalim", "en": "Jerusalem", "fr": "Jerusalem" } },
+      { "src": "assets/images/galerie/5/La zidul plangeri  25,0 x35,0 cm.png", "titles": { "ro": "La Zidul Plangerii", "en": "At the Wailing Wall", "fr": "Au Mur des Lamentations" } },
+      { "src": "assets/images/galerie/5/Maslinul din Ghetimani 25,0x35,0cm.png", "titles": { "ro": "Maslinul din Ghetimani", "en": "The Olive Tree of Gethsemane", "fr": "L'olivier de Gethsemani" } },
+      { "src": "assets/images/galerie/5/MONUMENTUL iN MEMORIA LUI JOHN FITZGERALD KENNEDY 31,5 x 24,0 cm.png", "titles": { "ro": "Monumentul in memoria lui John Fitzgerald Kennedy", "en": "Monument in memory of John Fitzgerald Kennedy", "fr": "Monument a la memoire de John Fitzgerald Kennedy" } }
+    ],
+    "videos": []
+  },
+  "data06": {
+    "titles": {
+      "ro": "Schite de Calatorie Creta",
+      "en": "Travel Sketches Crete",
+      "fr": "Esquisses de voyage Crete"
+    },
+    "descriptions": {
+      "ro": "Schite de Calatorie Creta.",
+      "en": "Travel Sketches Crete.",
+      "fr": "Esquisses de voyage Crete."
+    },
+    "images": [
+      { "src": "assets/images/galerie/6/Amurg la Hersonissos • Dusk at Hersonissos.jpg", "titles": { "ro": "Amurg la Hersonissos", "en": "Dusk at Hersonissos", "fr": "Crepuscule a Hersonissos" } },
+      { "src": "assets/images/galerie/6/Anogia • Anogia.jpg", "titles": { "ro": "Anogia", "en": "Anogia", "fr": "Anogia" } },
+      { "src": "assets/images/galerie/6/Înserare la Hersonissos • Sunset at Hersonissos.jpg", "titles": { "ro": "Inserare la Hersonissos", "en": "Sunset at Hersonissos", "fr": "Coucher de soleil a Hersonissos" } }
+    ],
+    "videos": []
+  },
+  "data07": {
+    "titles": {
+      "ro": "Schite de Calatorie China",
+      "en": "Travel Sketches China",
+      "fr": "Esquisses de voyage Chine"
+    },
+    "descriptions": {
+      "ro": "Schite de Calatorie China.",
+      "en": "Travel Sketches China.",
+      "fr": "Esquisses de voyage Chine."
+    },
+    "images": [
+      { "src": "assets/images/galerie/7/20171018_151438_HDR 2.png" },
+      { "src": "assets/images/galerie/7/20171018_151438_HDR 20.png" },
+      { "src": "assets/images/galerie/7/20171018_151438_HDR 5.png" },
+      { "src": "assets/images/galerie/7/20171018_151438_HDR 7.png" },
+      { "src": "assets/images/galerie/7/20171018_151438_HDR gri.png" },
+      { "src": "assets/images/galerie/7/20171018_151655_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151705_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151731_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151753_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151800_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151837_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151849_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_151911_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152001_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152010_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152043_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152212_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152221_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152249_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152332_HDR.png" },
+      { "src": "assets/images/galerie/7/20171018_152402_HDR.png" },
+      { "src": "assets/images/galerie/7/a02.png" },
+      { "src": "assets/images/galerie/7/a03.png" },
+      { "src": "assets/images/galerie/7/a09.png" },
+      { "src": "assets/images/galerie/7/b1.png" },
+      { "src": "assets/images/galerie/7/b2.png" },
+      { "src": "assets/images/galerie/7/b4.png" },
+      { "src": "assets/images/galerie/7/b5.png" },
+      { "src": "assets/images/galerie/7/b7.png" },
+      { "src": "assets/images/galerie/7/c3.png" },
+      { "src": "assets/images/galerie/7/c9.png" }
+    ],
+    "videos": []
+  },
+  "data08": {
+    "titles": {
+      "ro": "Schite de Calatorie Spre Nord",
+      "en": "Travel Sketches To the North",
+      "fr": "Esquisses de voyage Vers le Nord"
+    },
+    "descriptions": {
+      "ro": "Schite de Calatorie Spre Nord.",
+      "en": "Travel Sketches To the North.",
+      "fr": "Esquisses de voyage Vers le Nord."
+    },
+    "images": [
+      { "src": "assets/images/galerie/8/Berger Norvegia Hârtie Daler Rowney 25,5x17,7cm 31 iulie 2011.png", "titles": { "ro": "Berger, Norvegia", "en": "Berger, Norway", "fr": "Berger, Norvege" } },
+      { "src": "assets/images/galerie/8/Biciclete in Copengaga 14.8x21.0cm 3 august 2011.jpg", "titles": { "ro": "Biciclete in Copenhaga", "en": "Bicycles in Copenhagen", "fr": "Velos a Copenhague" } },
+      { "src": "assets/images/galerie/8/Candelabru de aur și sticlă de murană la Ernitage Rusia Hârtie Daler Rowney  15x20,2cm 20 iulie 2011.png", "titles": { "ro": "Candelabru de aur si sticla de Murano la Ermitaj, Rusia", "en": "Golden chandelier and Murano glass at the Hermitage, Russia", "fr": "Lustre dore et verre de Murano a l'Ermitage, Russie" } },
+      { "src": "assets/images/galerie/8/Cracovia Polonia Hârtie Daler Rowney  20,2x14,4cm 15iulie 2011.png", "titles": { "ro": "Cracovia, Polonia", "en": "Krakow, Poland", "fr": "Cracovie, Pologne" } },
+      { "src": "assets/images/galerie/8/Dresda 6august 2011 Hârtie speciala 14.8x21.0cm.jpg", "titles": { "ro": "Dresda", "en": "Dresden", "fr": "Dresde" } },
+      { "src": "assets/images/galerie/8/Drumul Atlanticului Hârtie Daler Rowney 17,7x13,0cm 29 iulie 2011.png", "titles": { "ro": "Drumul Atlanticului", "en": "Atlantic Road", "fr": "Route de l'Atlantique" } },
+      { "src": "assets/images/galerie/8/Hotel Claron Norvegia  Hârtie offset 14.8x21.0cm 29 iulie 2012.jpg", "titles": { "ro": "Hotel Claron, Norvegia", "en": "Hotel Claron, Norway", "fr": "Hotel Claron, Norvege" } },
+      { "src": "assets/images/galerie/8/Insulele Lofoten in asteptarea Feribotului  Norvegia Hârtie specială 14,5x6xcm 26 iulie 2011.png", "titles": { "ro": "Insulele Lofoten, in asteptarea feribotului, Norvegia", "en": "Lofoten Islands, waiting for the ferry, Norway", "fr": "Iles Lofoten, en attendant le ferry, Norvege" } },
+      { "src": "assets/images/galerie/8/Insulele Lofoten Norvegia Hârtie specială 23,0x14.png", "titles": { "ro": "Insulele Lofoten, Norvegia", "en": "Lofoten Islands, Norway", "fr": "Iles Lofoten, Norvege" } },
+      { "src": "assets/images/galerie/8/Marea catedrala Upsala Suedia 2 august 2011 21x14,5cm Hârtie specială.png", "titles": { "ro": "Marea catedrala, Uppsala, Suedia", "en": "The great cathedral, Uppsala, Sweden", "fr": "La grande cathedrale, Uppsala, Suede" } },
+      { "src": "assets/images/galerie/8/Mica sirenă Coopenhaga Danemarca august 2011.jpg", "titles": { "ro": "Mica sirena, Copenhaga, Danemarca", "en": "The Little Mermaid, Copenhagen, Denmark", "fr": "La Petite Sirene, Copenhague, Danemark" } },
+      { "src": "assets/images/galerie/8/Muzeul Ernitage 2 Sankt Petersburg Rusia 20 iulie 2011 Hârtie Daler Rowney 21,0x14,8cm.png", "titles": { "ro": "Muzeul Ermitaj 2, Sankt Petersburg, Rusia", "en": "Hermitage Museum 2, Saint Petersburg, Russia", "fr": "Musee de l'Ermitage 2, Saint-Petersbourg, Russie" } },
+      { "src": "assets/images/galerie/8/Muzeul Ernitage Sankt Petersburg Rusia 20 iulie 2011 Hârtie Daler Rowney 21,0x14,8cm.png", "titles": { "ro": "Muzeul Ermitaj, Sankt Petersburg, Rusia", "en": "Hermitage Museum, Saint Petersburg, Russia", "fr": "Musee de l'Ermitage, Saint-Petersbourg, Russie" } },
+      { "src": "assets/images/galerie/8/Norvegia Hârtie special 20 iulie 2011 23x14,6cm In asteptarea Feribotului.png", "titles": { "ro": "Norvegia, in asteptarea feribotului", "en": "Norway, waiting for the ferry", "fr": "Norvege, en attendant le ferry" } },
+      { "src": "assets/images/galerie/8/Ornamente aurite la palatul tarilor Sankt Petersburg Rusia 20 iulie 2011 Hârtie Daler Rowney 20,2x14,4cm.png", "titles": { "ro": "Ornamente aurite la palatul tarilor, Sankt Petersburg, Rusia", "en": "Golden ornaments at the Tsars' palace, Saint Petersburg, Russia", "fr": "Ornements dores au palais des tsars, Saint-Petersbourg, Russie" } },
+      { "src": "assets/images/galerie/8/Ornamente aurite si draperie la Țarskori Sankt Petersburg Hârtie Daler Rowney 14,3x20cm 20 iulie 2011.png", "titles": { "ro": "Ornamente aurite si draperie la Tsarskoye, Sankt Petersburg", "en": "Golden ornaments and drapery at Tsarskoye, Saint Petersburg", "fr": "Ornements dores et draperie a Tsarskoie, Saint-Petersbourg" } },
+      { "src": "assets/images/galerie/8/Palatul aurit Sankt Petersburg 20 iulie 2011 20,2x14,4cm Hârtie Daler Rowney.png", "titles": { "ro": "Palatul aurit, Sankt Petersburg", "en": "The gilded palace, Saint Petersburg", "fr": "Le palais dore, Saint-Petersbourg" } },
+      { "src": "assets/images/galerie/8/Pești la uscat Norvegia 26 iulie 2011 Hârtie italiană 23x14,6cm.png", "titles": { "ro": "Pesti la uscat, Norvegia", "en": "Drying fish, Norway", "fr": "Poissons sechant, Norvege" } },
+      { "src": "assets/images/galerie/8/Piața Ermitage Rusia 20 iulie 2011 Hârtie Daler Rowney 20,2x15cm.png", "titles": { "ro": "Piata Ermitaj, Rusia", "en": "Hermitage Square, Russia", "fr": "Place de l'Ermitage, Russie" } },
+      { "src": "assets/images/galerie/8/Ploaie la Tromso Norvegia Hartie Daler Rowney 35,5x25,4cm 25 iulie 2011.png", "titles": { "ro": "Ploaie la Tromso, Norvegia", "en": "Rain in Tromso, Norway", "fr": "Pluie a Tromso, Norvege" } },
+      { "src": "assets/images/galerie/8/Reni șezând Findlanda Hârte italiană  24 iulie 2011 23x14,6cm.png", "titles": { "ro": "Reni sezand, Finlanda", "en": "Resting reindeer, Finland", "fr": "Rennes assis, Finlande" } },
+      { "src": "assets/images/galerie/8/Rusia Ernitage  20 iulie 2011 20,5x15mm Hârtie specială.png", "titles": { "ro": "Rusia, Ermitaj", "en": "Russia, Hermitage", "fr": "Russie, Ermitage" } },
+      { "src": "assets/images/galerie/8/Sankt Petersburg Rusia 20 iulie 2011 Hârtie Daler Rowney 21,0x14,8cm.png", "titles": { "ro": "Sankt Petersburg, Rusia", "en": "Saint Petersburg, Russia", "fr": "Saint-Petersbourg, Russie" } },
+      { "src": "assets/images/galerie/8/Statuia lui Hermes si ornament cu delfini Oslo Hârtie Daler Rowney 25,3x17,6 1 august 2011.png", "titles": { "ro": "Statuia lui Hermes si ornament cu delfini, Oslo", "en": "Statue of Hermes and dolphin ornament, Oslo", "fr": "Statue d'Hermes et ornement aux dauphins, Oslo" } },
+      { "src": "assets/images/galerie/8/statuie in Sankt Petersburg 20 iulie 2011 Hârtie Daler Rowney 20,2x14,4.png", "titles": { "ro": "Statuie in Sankt Petersburg", "en": "Statue in Saint Petersburg", "fr": "Statue a Saint-Petersbourg" } },
+      { "src": "assets/images/galerie/8/Turla de biserica Dresda 6august 2011 Hârtie speciala 14.8x21.0cm.jpg", "titles": { "ro": "Turla de biserica, Dresda", "en": "Church spire, Dresden", "fr": "Clocher d'eglise, Dresde" } },
+      { "src": "assets/images/galerie/8/Turmă de reni Finlanda 24 iulie 2011 Hârtie italiană 23x14,6cm.png", "titles": { "ro": "Turma de reni, Finlanda", "en": "Reindeer herd, Finland", "fr": "Troupeau de rennes, Finlande" } }
+    ],
+    "videos": []
   }
 };
 
@@ -886,7 +1116,7 @@ function genereazaGalerie(data, lang) {
     };
 
     const img = document.createElement('img');
-    img.src = entry.images[0];
+    img.src = getMediaSrc(entry.images[0]);
     img.className = 'card-img-top';
     img.alt = entry.titles[lang];
     img.style.height = '200px';
@@ -933,33 +1163,132 @@ function genereazaGaleriDetail(key, data, lang) {
   const imagesContainer = document.createElement('div');
   imagesContainer.className = 'row';
 
-  entry.images.forEach(img => {
+  entry.images.forEach(image => {
     const col = document.createElement('div');
     col.className = 'col-md-4 mb-4';
+    const mediaWrapper = document.createElement('div');
+    mediaWrapper.className = 'd-flex flex-column gap-2';
     const imgElement = document.createElement('img');
-    imgElement.src = img;
+    imgElement.dataset.src = getMediaSrc(image);
+    imgElement.loading = 'lazy';
+    imgElement.decoding = 'async';
     imgElement.className = 'img-fluid';
-    imgElement.alt = '';
-    col.appendChild(imgElement);
+    imgElement.alt = getTranslatedMediaTitle(image, lang) || '';
+    mediaWrapper.appendChild(imgElement);
+
+    const imageTitle = createMediaTitleElement(image, lang);
+    if (imageTitle) {
+      mediaWrapper.appendChild(imageTitle);
+    }
+
+    col.appendChild(mediaWrapper);
     imagesContainer.appendChild(col);
   });
 
   galerie.appendChild(imagesContainer);
+  initializeGalleryLazyLoading(imagesContainer);
 
   // Videos
   if (entry.videos && entry.videos.length > 0) {
     const videosContainer = document.createElement('div');
     videosContainer.className = 'row';
 
-    entry.videos.forEach(vid => {
+    entry.videos.forEach(video => {
       const col = document.createElement('div');
       col.className = 'col-md-4 mb-4';
-      col.innerHTML = `<video controls class="img-fluid"><source src="${vid}" type="video/mp4"></video>`;
+
+      const mediaWrapper = document.createElement('div');
+      mediaWrapper.className = 'd-flex flex-column gap-2';
+
+      const videoElement = document.createElement('video');
+      videoElement.controls = true;
+      videoElement.className = 'img-fluid';
+
+      const sourceElement = document.createElement('source');
+      sourceElement.src = getMediaSrc(video);
+      sourceElement.type = 'video/mp4';
+      videoElement.appendChild(sourceElement);
+
+      mediaWrapper.appendChild(videoElement);
+
+      const videoTitle = createMediaTitleElement(video, lang);
+      if (videoTitle) {
+        mediaWrapper.appendChild(videoTitle);
+      }
+
+      col.appendChild(mediaWrapper);
       videosContainer.appendChild(col);
     });
 
     galerie.appendChild(videosContainer);
   }
+}
+
+function initializeGalleryLazyLoading(container) {
+  const lazyImages = container.querySelectorAll('img[data-src]');
+
+  if (!lazyImages.length) {
+    return;
+  }
+
+  const loadImage = (imgElement) => {
+    if (!imgElement.dataset.src) {
+      return;
+    }
+
+    imgElement.src = imgElement.dataset.src;
+    imgElement.removeAttribute('data-src');
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    lazyImages.forEach(loadImage);
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      loadImage(entry.target);
+      currentObserver.unobserve(entry.target);
+    });
+  }, {
+    rootMargin: '200px 0px',
+    threshold: 0.01
+  });
+
+  lazyImages.forEach(imgElement => observer.observe(imgElement));
+}
+
+function getMediaSrc(mediaItem) {
+  if (typeof mediaItem === 'string') {
+    return mediaItem;
+  }
+
+  return mediaItem?.src || '';
+}
+
+function getTranslatedMediaTitle(mediaItem, lang) {
+  if (!mediaItem || typeof mediaItem === 'string' || !mediaItem.titles) {
+    return '';
+  }
+
+  return mediaItem.titles[lang] || mediaItem.titles.ro || mediaItem.titles.en || mediaItem.titles.fr || '';
+}
+
+function createMediaTitleElement(mediaItem, lang) {
+  const mediaTitle = getTranslatedMediaTitle(mediaItem, lang);
+
+  if (!mediaTitle) {
+    return null;
+  }
+
+  const titleElement = document.createElement('p');
+  titleElement.className = 'text-muted mb-0';
+  titleElement.textContent = mediaTitle;
+  return titleElement;
 }
 
 function setLanguage(lang) {
