@@ -28,16 +28,20 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" id="menu_home" href="#">Acasă</a>
+            <a class="nav-link active" aria-current="page" id="menu_home" data-target="#home"
+              onclick="showSection('#home')">Acasă</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" id="menu_exhibitions" href="#expozitii">Expoziții</a>
+            <a class="nav-link" aria-current="page" id="menu_exhibitions" data-target="#expozitii"
+              onclick="showSection('#expozitii')">Expoziții</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" id="menu_books" href="#albume">Cărți</a>
+            <a class="nav-link" aria-current="page" id="menu_books" data-target="#albume"
+              onclick="showSection('#albume')">Cărți</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" id="menu_gallery" href="#activitate">Galerie</a>
+            <a class="nav-link" aria-current="page" id="menu_gallery" data-target="#activitate"
+              onclick="showSection('#activitate')">Galerie</a>
           </li>
 
           <!-- Dropdown pentru limbă cu SVG inline -->
@@ -97,7 +101,7 @@
     </nav>
 
   </header>
-  <section id="home" class="m-4">
+  <section id="home" class="m-4 section">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-xl-6 col-lg-6 col-md-10">
@@ -112,7 +116,7 @@
       </div>
     </div>
   </section>
-  <section id="expozitii" class="m-4">
+  <section id="expozitii" class="m-4 section" style="display: none;">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-xl-6 col-lg-6 col-md-10 order-1">
@@ -130,7 +134,7 @@
     </div>
   </section>
 
-  <section id="albume" class="ms-4">
+  <section id="albume" class="ms-4 section" style="display: none;">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-xl-6 col-lg-6 col-md-10">
@@ -142,6 +146,17 @@
         <div class="col-xxl-6 col-xl-6 col-lg-6">
           <div class="asm-image text-center text-lg-start mt-4">
             <img class="img-fluid" src="assets/images/carti/La malul apei.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="activitate" class="m-4 section" style="display: none;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="asm-content" id="galerie">
           </div>
         </div>
       </div>

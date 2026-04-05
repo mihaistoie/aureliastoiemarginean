@@ -4,6 +4,8 @@ const supportedLang = {
   fr: true,
 }
 
+let currentSection = '#home';
+
 const menu = {
   ro: {
     home: "Acasă",
@@ -747,6 +749,35 @@ const citate = {
   ]
 };
 
+const gallery = {
+  "data01": {
+    "titles": {
+      "ro": "Vernisajul expoziției Marea la 2Mai și Vama Veche, de la Galeriile Europe, din Brașov, aprilie  2019",
+      "en": "The opening of the exhibition 'The Sea at 2Mai and Vama Veche', from Europe Galleries, Brașov, April 2019",
+      "fr": "L'ouverture de l'exposition 'La mer à 2Mai et Vama Veche', des Galeries Europe, Brașov, avril 2019"
+    },
+    "descriptions": {
+      "ro": "Aurelia Stoie Mărginean este prezentată de Veronica Bodea Tatulea, critic de artă și de poeta Nadia Cella Pop",
+      "en": "Aurelia Stoie Mărginean is presented by Veronica Bodea Tatulea, art critic and poet Nadia Cella Pop",
+      "fr": "Aurelia Stoie Mărginean est présentée par Veronica Bodea Tatulea, critique d'art et poétesse Nadia Cella Pop"
+    },
+    "images": [
+      "assets/images/galerie/1/image01.jpeg",
+      "assets/images/galerie/1/image02.jpeg",
+      "assets/images/galerie/1/image03.jpeg",
+      "assets/images/galerie/1/image04.jpeg",
+      "assets/images/galerie/1/image05.jpeg",
+      "assets/images/galerie/1/image06.jpeg",
+      "assets/images/galerie/1/image07.jpeg"
+    ],
+    "videos": [
+      "assets/images/galerie/1/video01.mp4",
+      "assets/images/galerie/1/video02.mp4",
+      "assets/images/galerie/1/video03.mp4",
+    ]
+  }
+};
+
 
 
 // Funcția de bază pentru generarea listei 
@@ -763,20 +794,11 @@ function genereazaListaExpozitii(data, lang) {
     console.error("Elementul cu ID-ul 'lista-expozitii-titlu' nu a fost găsit.");
     return;
   }
-  titlu.innerHTML = '';
-  titlu.appendChild(document.createTextNode(data[lang].titlu));
+  titlu.innerHTML = data[lang].titlu;
 
   data[lang].events.forEach(item => {
     const listItem = document.createElement('li');
-    const yearStrong = document.createElement('strong');
-
-    // Asigură-te că datele JSON sunt coerente cu structura așteptată
-    yearStrong.appendChild(document.createTextNode(item.year));
-
-    listItem.appendChild(yearStrong);
-    // Observație: textul este injectat direct pentru a include separatorul și punctul
-    listItem.appendChild(document.createTextNode(` – ${item.event}.`));
-
+    listItem.innerHTML = `<strong>${item.year}</strong> – ${item.event}.`;
     listaExpozitii.appendChild(listItem);
   });
 }
@@ -794,19 +816,10 @@ function genereazaListaBooks(data, lang) {
     console.error("Elementul cu ID-ul 'lista-carti-titlu' nu a fost găsit.");
     return;
   }
-  titlu.innerHTML = '';
-  titlu.appendChild(document.createTextNode(data[lang].titlu));
+  titlu.innerHTML = data[lang].titlu;
   data[lang].items.forEach(item => {
     const listItem = document.createElement('li');
-    const yearStrong = document.createElement('strong');
-
-    // Asigură-te că datele JSON sunt coerente cu structura așteptată
-    yearStrong.appendChild(document.createTextNode(item.titlu));
-
-    listItem.appendChild(yearStrong);
-    // Observație: textul este injectat direct pentru a include separatorul și punctul
-    listItem.appendChild(document.createTextNode(` ${item.detaliu}.`));
-
+    listItem.innerHTML = `<strong>${item.titlu}</strong> ${item.detaliu}.`;
     listaCarti.appendChild(listItem);
   });
 }
@@ -817,15 +830,7 @@ function genereazaCitate(data, lang) {
     console.error("Elementul cu ID-ul 'citate' nu a fost găsit.");
     return;
   }
-  citate.innerHTML = '';
-  const titlu = document.createElement('h1');
-  titlu.appendChild(document.createTextNode('Aurelia Stoie Mărginean'));
-  citate.appendChild(titlu);
-  data[lang].forEach(item => {
-    const citat = document.createElement('p');
-    citat.appendChild(document.createTextNode(item));
-    citate.appendChild(citat);
-  });
+  citate.innerHTML = `<h1>Aurelia Stoie Mărginean</h1>${data[lang].map(item => `<p>${item}</p>`).join('')}`;
 }
 
 
@@ -851,14 +856,110 @@ function genereazaMenu(data, lang) {
     return;
   }
   const lang_data = data[lang];
-  home.innerHTML = '';
-  exhibitions.innerHTML = '';
-  books.innerHTML = '';
-  gallery.innerHTML = '';
-  home.appendChild(document.createTextNode(lang_data.home));
-  exhibitions.appendChild(document.createTextNode(lang_data.exhibitions));
-  books.appendChild(document.createTextNode(lang_data.books));
-  gallery.appendChild(document.createTextNode(lang_data.gallery));
+  home.innerHTML = lang_data.home;
+  exhibitions.innerHTML = lang_data.exhibitions;
+  books.innerHTML = lang_data.books;
+  gallery.innerHTML = lang_data.gallery;
+}
+
+function genereazaGalerie(data, lang) {
+  const galerie = document.getElementById('galerie');
+  if (!galerie) {
+    console.error("Elementul cu ID-ul 'galerie' nu a fost găsit.");
+    return;
+  }
+  galerie.innerHTML = '';
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  for (const key in data) {
+    const entry = data[key];
+    const col = document.createElement('div');
+    col.className = 'col-md-4 col-sm-6 mb-4';
+
+    const card = document.createElement('div');
+    card.className = 'card cursor-pointer gallery-card';
+    card.style.cursor = 'pointer';
+    card.onclick = (e) => {
+      e.preventDefault();
+      window.location.hash = 'galery-' + key;
+    };
+
+    const img = document.createElement('img');
+    img.src = entry.images[0];
+    img.className = 'card-img-top';
+    img.alt = entry.titles[lang];
+    img.style.height = '200px';
+    img.style.objectFit = 'cover';
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+    cardBody.innerHTML = `<h5 class="card-title">${entry.titles[lang]}</h5>`;
+
+    card.appendChild(img);
+    card.appendChild(cardBody);
+    col.appendChild(card);
+    row.appendChild(col);
+  }
+
+  galerie.appendChild(row);
+}
+
+function genereazaGaleriDetail(key, data, lang) {
+  const galerie = document.getElementById('galerie');
+  if (!galerie) {
+    console.error("Elementul cu ID-ul 'galerie' nu a fost găsit.");
+    return;
+  }
+
+  const entry = data[key];
+  galerie.innerHTML = '';
+
+  // Title
+  const title = document.createElement('h2');
+  title.innerHTML = entry.titles[lang];
+  galerie.appendChild(title);
+
+  // Description
+  if (entry.descriptions && entry.descriptions[lang]) {
+    const description = document.createElement('p');
+    description.innerHTML = entry.descriptions[lang];
+    description.style.fontSize = '0.95em';
+    description.className = 'text-muted mb-4';
+    galerie.appendChild(description);
+  }
+
+  // Images
+  const imagesContainer = document.createElement('div');
+  imagesContainer.className = 'row';
+
+  entry.images.forEach(img => {
+    const col = document.createElement('div');
+    col.className = 'col-md-4 mb-4';
+    const imgElement = document.createElement('img');
+    imgElement.src = img;
+    imgElement.className = 'img-fluid';
+    imgElement.alt = '';
+    col.appendChild(imgElement);
+    imagesContainer.appendChild(col);
+  });
+
+  galerie.appendChild(imagesContainer);
+
+  // Videos
+  if (entry.videos && entry.videos.length > 0) {
+    const videosContainer = document.createElement('div');
+    videosContainer.className = 'row';
+
+    entry.videos.forEach(vid => {
+      const col = document.createElement('div');
+      col.className = 'col-md-4 mb-4';
+      col.innerHTML = `<video controls class="img-fluid"><source src="${vid}" type="video/mp4"></video>`;
+      videosContainer.appendChild(col);
+    });
+
+    galerie.appendChild(videosContainer);
+  }
 }
 
 function setLanguage(lang) {
@@ -902,6 +1003,15 @@ function updateSelectLang(defaultLang) {
       setLanguage(lang.toLowerCase());
       // Eveniment la schimbarea limbii
       incarcaDate(lang.toLowerCase());
+      showSection(currentSection);
+      // Refresh gallery with new language if on gallery detail
+      const hash = window.location.hash.substring(1);
+      if (hash.startsWith('galery-')) {
+        const key = hash.replace('galery-', '');
+        if (gallery[key]) {
+          genereazaGaleriDetail(key, gallery, lang.toLowerCase());
+        }
+      }
 
       // Închidem dropdown-ul
       const dropdown = bootstrap.Dropdown.getInstance(document.getElementById('currentLanguage'));
@@ -915,11 +1025,95 @@ function incarcaDate(lang) {
   genereazaCitate(citate, lang)
   genereazaListaExpozitii(expozitii, lang);
   genereazaListaBooks(books, lang);
+  handleGalleryHash(gallery, lang);
+}
+
+function handleGalleryHash(data, lang) {
+  const hash = window.location.hash.substring(1);
+  if (hash.startsWith('galery-')) {
+    const key = hash.replace('galery-', '');
+    if (data[key]) {
+      genereazaGaleriDetail(key, data, lang);
+    } else {
+      genereazaGalerie(data, lang);
+    }
+  } else {
+    genereazaGalerie(data, lang);
+  }
+}
+function showSection(target) {
+  // Hide all sections
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.style.display = 'none';
+  });
+  // Show the target section
+  const targetSection = document.querySelector(target);
+  if (targetSection) {
+    targetSection.style.display = 'block';
+  }
+  currentSection = target;
+
+  // Scroll to top
+  window.scrollTo(0, 0);
+
+  // Update active menu
+  const menuLinks = document.querySelectorAll('.nav-link');
+  menuLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+  const activeLink = document.querySelector(`[data-target="${target}"]`);
+  if (activeLink) {
+    activeLink.classList.add('active');
+  }
 }
 function documentLoaded() {
   const lang = getLang();
   updateSelectLang(lang)
   incarcaDate(lang);
+
+  // Setup menu click handlers to change hash
+  const menuLinks = document.querySelectorAll('.nav-link[data-target]');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = link.getAttribute('data-target').replace('#', '');
+      window.location.hash = target;
+    });
+  });
+
+  // Check initial hash
+  const hash = window.location.hash.substring(1);
+  if (hash.startsWith('galery-')) {
+    showSection('#activitate');
+    handleGalleryHash(gallery, lang);
+  } else if (hash === 'home' || hash === 'expozitii' || hash === 'albume' || hash === 'activitate') {
+    showSection('#' + hash);
+  } else {
+    showSection('#home');
+  }
+
+  // Listen for hash changes
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.substring(1);
+    const lang = getLang();
+
+    // Check if it's a gallery detail
+    if (hash.startsWith('galery-')) {
+      showSection('#activitate');
+      const key = hash.replace('galery-', '');
+      if (gallery[key]) {
+        genereazaGaleriDetail(key, gallery, lang);
+      } else {
+        genereazaGalerie(gallery, lang);
+      }
+    } else if (hash === 'activitate') {
+      showSection('#activitate');
+      genereazaGalerie(gallery, lang);  // Reîncarcă meniu galerie
+    } else if (hash === 'home' || hash === 'expozitii' || hash === 'albume') {
+      showSection('#' + hash);
+    }
+  });
 }
 
 
