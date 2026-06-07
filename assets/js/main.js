@@ -732,6 +732,40 @@ const books = {
 };
 
 
+const exhibitionAnnouncement = {
+  ro: {
+    date: "iulie 2026",
+    imageAlt: "Invitație la expoziția «Portretul unui oraș - Brașov»",
+    eyebrow: "Expoziție de grafică și pictură",
+    title: "„Portretul unui oraș - Brașov”",
+    intro: "Expoziția artistei Aurelia Stoie Mărginean este găzduită de Galeriile Europe din Brașov, în perioada 8-18 iulie 2026.",
+    opening: "Vernisaj: sâmbătă, 11 iulie, ora 11:00",
+    description: "Sunt expuse lucrări din perioade diferite, explorând atașamentul artistei pentru orașul său și viziunea unică exprimată în „vedutele aeriene” care au consacrat-o în peisajul picturii contemporane. Expoziția reunește acuarele și desene, precum și lucrări de grafică expuse pentru prima dată.",
+    honor: "Aurelia Stoie Mărginean este cetățean de onoare al orașului Brașov."
+  },
+  en: {
+    date: "July 2026",
+    imageAlt: "Invitation to the exhibition “Portrait of a City - Brașov”",
+    eyebrow: "Graphic art and painting exhibition",
+    title: "“Portrait of a City - Brașov”",
+    intro: "The graphic art and painting exhibition by Aurelia Stoie Mărginean is hosted by the Europe Galleries in Brașov from July 8 to 18, 2026.",
+    opening: "Opening: Saturday, July 11, at 11:00 a.m.",
+    description: "The exhibition presents works from different periods, exploring the artist's attachment to her city and the unique vision expressed through the “aerial views” that established her place in contemporary painting. It brings together watercolors and drawings, as well as graphic works exhibited for the first time.",
+    honor: "Aurelia Stoie Mărginean is an honorary citizen of the city of Brașov."
+  },
+  fr: {
+    date: "juillet 2026",
+    imageAlt: "Invitation à l'exposition « Portrait d'une ville - Brașov »",
+    eyebrow: "Exposition d'art graphique et de peinture",
+    title: "« Portrait d'une ville - Brașov »",
+    intro: "L'exposition d'art graphique et de peinture de l'artiste Aurelia Stoie Mărginean est accueillie par les Galeries Europe de Brașov du 8 au 18 juillet 2026.",
+    opening: "Vernissage : samedi 11 juillet à 11 h 00",
+    description: "L'exposition présente des œuvres de différentes périodes, explorant l'attachement de l'artiste à sa ville et la vision unique exprimée dans ses « vues aériennes », qui l'ont consacrée dans le paysage de la peinture contemporaine. Elle réunit des aquarelles et des dessins, ainsi que des œuvres graphiques exposées pour la première fois.",
+    honor: "Aurelia Stoie Mărginean est citoyenne d'honneur de la ville de Brașov."
+  }
+};
+
+
 const citate = {
   "ro": [
     "\"Aurelia Stoie Mărginean este un asemenea artist care răscolește toate bucătăriile lumii, se umple de gusturi stranii și arome ca să le redea oamenilor transfigurate de plăcerea resimțită de ea. Iată imaginea pe care mi-o stârnește cunoscuta și recunoscuta artistă plastică Aurelia Stoie Mărginean, după mulți ani în care am avut răgaz s-o cunosc ca pictoriță și ca prietenă. Până și numele ei pare predestinat. Aurelia e o artistă solară care trăiește și recreează frumosul sub toate formele lui...\" - Nora Iuga. Tăcutele culori vor să se audă - Cetatea lui Bucur",
@@ -776,6 +810,7 @@ const gallery = {
       { "src": "assets/images/galerie/1/video03.mp4" },
     ]
   },
+  /*
   "data02": {
     "titles": {
       "ro": "Galerie de portrete",
@@ -1006,6 +1041,7 @@ const gallery = {
     ],
     "videos": []
   }
+  */
 };
 
 
@@ -1061,6 +1097,27 @@ function genereazaCitate(data, lang) {
     return;
   }
   citate.innerHTML = `<h1>Aurelia Stoie Mărginean</h1>${data[lang].map(item => `<p>${item}</p>`).join('')}`;
+}
+
+function genereazaAnuntExpozitie(data, lang) {
+  const announcement = data[lang] || data.ro;
+  const fields = {
+    'announcement-date': announcement.date,
+    'announcement-eyebrow': announcement.eyebrow,
+    'exhibition-announcement-title': announcement.title,
+    'announcement-intro': announcement.intro,
+    'announcement-opening': announcement.opening,
+    'announcement-description': announcement.description,
+    'announcement-honor': announcement.honor
+  };
+
+  Object.entries(fields).forEach(([id, value]) => {
+    const element = document.getElementById(id);
+    if (element) element.textContent = value;
+  });
+
+  const image = document.getElementById('announcement-image');
+  if (image) image.alt = announcement.imageAlt;
 }
 
 
@@ -1351,6 +1408,7 @@ function updateSelectLang(defaultLang) {
 // Funcția asincronă care folosește fetch
 function incarcaDate(lang) {
   genereazaMenu(menu, lang)
+  genereazaAnuntExpozitie(exhibitionAnnouncement, lang)
   genereazaCitate(citate, lang)
   genereazaListaExpozitii(expozitii, lang);
   genereazaListaBooks(books, lang);

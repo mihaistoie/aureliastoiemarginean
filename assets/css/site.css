@@ -70,6 +70,119 @@ a:hover {
   z-index: 1;
 }
 
+.exhibition-announcement {
+  display: grid;
+  grid-template-columns: minmax(130px, 170px) minmax(250px, 330px) 1fr;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  border: 1px solid rgba(55, 194, 204, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.exhibition-announcement__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.25rem;
+  background: #37C2CC;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.exhibition-announcement__date span {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.exhibition-announcement__date strong {
+  margin-top: 0.45rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.exhibition-announcement__visual {
+  min-height: 100%;
+  background: #fff;
+}
+
+.exhibition-announcement__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exhibition-announcement__content {
+  padding: 2rem 2.5rem;
+}
+
+.exhibition-announcement__eyebrow {
+  margin-bottom: 0.35rem;
+  color: #258e96;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.exhibition-announcement h1 {
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.82);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+}
+
+.exhibition-announcement__opening {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0.25rem 0 1rem;
+  padding: 0.65rem 0.9rem;
+  border-left: 4px solid #37C2CC;
+  background: rgba(55, 194, 204, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  #home {
+    margin: 1rem !important;
+  }
+
+  .exhibition-announcement {
+    grid-template-columns: 1fr;
+  }
+
+  .exhibition-announcement__date {
+    padding: 1rem;
+  }
+
+  .exhibition-announcement__date span {
+    font-size: 2.25rem;
+  }
+
+  .exhibition-announcement__visual img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .exhibition-announcement__content {
+    padding: 1.5rem;
+  }
+
+  .exhibition-announcement__opening {
+    align-items: flex-start;
+  }
+}
+
 a.scroll-top {
   width: 45px;
   height: 45px;
