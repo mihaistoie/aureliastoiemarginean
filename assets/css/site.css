@@ -183,6 +183,13 @@ a:hover {
   }
 }
 
+.expozitie-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-top: 0.25rem;
+}
+
 a.scroll-top {
   width: 45px;
   height: 45px;

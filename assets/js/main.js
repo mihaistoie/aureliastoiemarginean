@@ -197,6 +197,20 @@ const expozitii = {
       {
         "year": "2025",
         "event": "Expoziție personală \"Cascade și ghetari in tarile nordice\", Galeriile Europe, Brașov"
+      },
+      {
+        "year": "2026",
+        "event": "Expoziție personală \"Portretul unui oraș - Brașov\", Galeriile Europe, Brașov",
+        "links": [
+          {
+            "url": "https://bzb.ro/stire/o-galerie-prea-mica-pentru-un-public-atat-de-numeros-cum-a-fost-la-expozitia-aurelia-stoie-marginean-portretul-unui-oras-brasov-a221808",
+            "label": "O galerie prea mică, pentru un public atât de numeros"
+          },
+          {
+            "url": "https://www.radiobrasovfm.ro/stiri-din-brasov/prima-expozitie-in-memoriam-aurelia-stoie-marginean-id217400.html",
+            "label": "Prima expoziție „in memoriam” Aurelia Stoie Mărginean"
+          }
+        ]
       }
     ]
   },
@@ -370,6 +384,20 @@ const expozitii = {
       {
         "year": "2025",
         "event": "Exposition personnelle \"Cascades et glaciers dans les pays nordiques\", Galeries Europe, Brașov"
+      },
+      {
+        "year": "2026",
+        "event": "Exposition personnelle \"Portrait d'une ville - Brașov\", Galeries Europe, Brașov",
+        "links": [
+          {
+            "url": "https://bzb.ro/stire/o-galerie-prea-mica-pentru-un-public-atat-de-numeros-cum-a-fost-la-expozitia-aurelia-stoie-marginean-portretul-unui-oras-brasov-a221808",
+            "label": "Une galerie trop petite pour un public aussi nombreux"
+          },
+          {
+            "url": "https://www.radiobrasovfm.ro/stiri-din-brasov/prima-expozitie-in-memoriam-aurelia-stoie-marginean-id217400.html",
+            "label": "Première exposition « in memoriam » Aurelia Stoie Mărginean"
+          }
+        ]
       }
     ]
   },
@@ -544,6 +572,20 @@ const expozitii = {
       {
         "year": "2025",
         "event": "Solo exhibition \"Waterfalls and Glaciers in the Northern Countries\", Europe Galleries, Brașov"
+      },
+      {
+        "year": "2026",
+        "event": "Solo exhibition \"Portrait of a City - Brașov\", Europe Galleries, Brașov",
+        "links": [
+          {
+            "url": "https://bzb.ro/stire/o-galerie-prea-mica-pentru-un-public-atat-de-numeros-cum-a-fost-la-expozitia-aurelia-stoie-marginean-portretul-unui-oras-brasov-a221808",
+            "label": "A gallery too small for such a large audience"
+          },
+          {
+            "url": "https://www.radiobrasovfm.ro/stiri-din-brasov/prima-expozitie-in-memoriam-aurelia-stoie-marginean-id217400.html",
+            "label": "First exhibition \"in memoriam\" Aurelia Stoie Mărginean"
+          }
+        ]
       }
     ]
   }
@@ -731,39 +773,6 @@ const books = {
 
 };
 
-
-const exhibitionAnnouncement = {
-  ro: {
-    date: "iulie 2026",
-    imageAlt: "Invitație la expoziția «Portretul unui oraș - Brașov»",
-    eyebrow: "Expoziție de grafică și pictură",
-    title: "„Portretul unui oraș - Brașov”",
-    intro: "Expoziția artistei Aurelia Stoie Mărginean este găzduită de Galeriile Europe din Brașov, în perioada 8-18 iulie 2026.",
-    opening: "Vernisaj: sâmbătă, 11 iulie, ora 11:00",
-    description: "Sunt expuse lucrări din perioade diferite, explorând atașamentul artistei pentru orașul său și viziunea unică exprimată în „vedutele aeriene” care au consacrat-o în peisajul picturii contemporane. Expoziția reunește acuarele și desene, precum și lucrări de grafică expuse pentru prima dată.",
-    honor: "Aurelia Stoie Mărginean este cetățean de onoare al orașului Brașov."
-  },
-  en: {
-    date: "July 2026",
-    imageAlt: "Invitation to the exhibition “Portrait of a City - Brașov”",
-    eyebrow: "Graphic art and painting exhibition",
-    title: "“Portrait of a City - Brașov”",
-    intro: "The graphic art and painting exhibition by Aurelia Stoie Mărginean is hosted by the Europe Galleries in Brașov from July 8 to 18, 2026.",
-    opening: "Opening: Saturday, July 11, at 11:00 a.m.",
-    description: "The exhibition presents works from different periods, exploring the artist's attachment to her city and the unique vision expressed through the “aerial views” that established her place in contemporary painting. It brings together watercolors and drawings, as well as graphic works exhibited for the first time.",
-    honor: "Aurelia Stoie Mărginean is an honorary citizen of the city of Brașov."
-  },
-  fr: {
-    date: "juillet 2026",
-    imageAlt: "Invitation à l'exposition « Portrait d'une ville - Brașov »",
-    eyebrow: "Exposition d'art graphique et de peinture",
-    title: "« Portrait d'une ville - Brașov »",
-    intro: "L'exposition d'art graphique et de peinture de l'artiste Aurelia Stoie Mărginean est accueillie par les Galeries Europe de Brașov du 8 au 18 juillet 2026.",
-    opening: "Vernissage : samedi 11 juillet à 11 h 00",
-    description: "L'exposition présente des œuvres de différentes périodes, explorant l'attachement de l'artiste à sa ville et la vision unique exprimée dans ses « vues aériennes », qui l'ont consacrée dans le paysage de la peinture contemporaine. Elle réunit des aquarelles et des dessins, ainsi que des œuvres graphiques exposées pour la première fois.",
-    honor: "Aurelia Stoie Mărginean est citoyenne d'honneur de la ville de Brașov."
-  }
-};
 
 
 const citate = {
@@ -1116,7 +1125,11 @@ function genereazaListaExpozitii(data, lang) {
 
   data[lang].events.forEach(item => {
     const listItem = document.createElement('li');
-    listItem.innerHTML = `<strong>${item.year}</strong> – ${item.event}.`;
+    const links = item.links || (item.link ? [{ url: item.link, label: item.linkLabel }] : []);
+    const linksHtml = links
+      .map((l, i) => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label || `[${i + 1}]`}</a>`)
+      .join('');
+    listItem.innerHTML = `<strong>${item.year}</strong> – ${item.event}.${linksHtml ? `<div class="expozitie-links">${linksHtml}</div>` : ''}`;
     listaExpozitii.appendChild(listItem);
   });
 }
@@ -1149,27 +1162,6 @@ function genereazaCitate(data, lang) {
     return;
   }
   citate.innerHTML = `<h1>Aurelia Stoie Mărginean</h1>${data[lang].map(item => `<p>${item}</p>`).join('')}`;
-}
-
-function genereazaAnuntExpozitie(data, lang) {
-  const announcement = data[lang] || data.ro;
-  const fields = {
-    'announcement-date': announcement.date,
-    'announcement-eyebrow': announcement.eyebrow,
-    'exhibition-announcement-title': announcement.title,
-    'announcement-intro': announcement.intro,
-    'announcement-opening': announcement.opening,
-    'announcement-description': announcement.description,
-    'announcement-honor': announcement.honor
-  };
-
-  Object.entries(fields).forEach(([id, value]) => {
-    const element = document.getElementById(id);
-    if (element) element.textContent = value;
-  });
-
-  const image = document.getElementById('announcement-image');
-  if (image) image.alt = announcement.imageAlt;
 }
 
 
@@ -1460,7 +1452,6 @@ function updateSelectLang(defaultLang) {
 // Funcția asincronă care folosește fetch
 function incarcaDate(lang) {
   genereazaMenu(menu, lang)
-  genereazaAnuntExpozitie(exhibitionAnnouncement, lang)
   genereazaCitate(citate, lang)
   genereazaListaExpozitii(expozitii, lang);
   genereazaListaBooks(books, lang);
