@@ -209,6 +209,11 @@ const expozitii = {
           {
             "url": "https://www.radiobrasovfm.ro/stiri-din-brasov/prima-expozitie-in-memoriam-aurelia-stoie-marginean-id217400.html",
             "label": "Prima expoziție „in memoriam” Aurelia Stoie Mărginean"
+          },
+          {
+            "type": "audio",
+            "url": "assets/audio/interviu2026.mp3",
+            "label": "Radio Romania Brasov FM"
           }
         ]
       }
@@ -396,6 +401,11 @@ const expozitii = {
           {
             "url": "https://www.radiobrasovfm.ro/stiri-din-brasov/prima-expozitie-in-memoriam-aurelia-stoie-marginean-id217400.html",
             "label": "Première exposition « in memoriam » Aurelia Stoie Mărginean"
+          },
+          {
+            "type": "audio",
+            "url": "assets/audio/interviu2026.mp3",
+            "label": "Radio Romania Brasov FM"
           }
         ]
       }
@@ -584,6 +594,11 @@ const expozitii = {
           {
             "url": "https://www.radiobrasovfm.ro/stiri-din-brasov/prima-expozitie-in-memoriam-aurelia-stoie-marginean-id217400.html",
             "label": "First exhibition \"in memoriam\" Aurelia Stoie Mărginean"
+          },
+          {
+            "type": "audio",
+            "url": "assets/audio/interviu2026.mp3",
+            "label": "Radio Romania Brasov FM"
           }
         ]
       }
@@ -1127,7 +1142,12 @@ function genereazaListaExpozitii(data, lang) {
     const listItem = document.createElement('li');
     const links = item.links || (item.link ? [{ url: item.link, label: item.linkLabel }] : []);
     const linksHtml = links
-      .map((l, i) => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label || `[${i + 1}]`}</a>`)
+      .map((l, i) => {
+        if (l.type === 'audio') {
+          return `<div class="expozitie-audio"><span class="expozitie-audio-label">${l.label || ''}</span><audio controls preload="none" src="${l.url}"></audio></div>`;
+        }
+        return `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label || `[${i + 1}]`}</a>`;
+      })
       .join('');
     listItem.innerHTML = `<strong>${item.year}</strong> – ${item.event}.${linksHtml ? `<div class="expozitie-links">${linksHtml}</div>` : ''}`;
     listaExpozitii.appendChild(listItem);
